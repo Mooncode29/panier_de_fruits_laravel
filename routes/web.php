@@ -20,3 +20,10 @@ Route::get('/products/show/{id}', 'ProductController@getShow');
 
 Route::post('/products/sell/{id}', 'ProductController@postSell');
 Route::post('/products/restock/{id}', 'ProductController@postRestock');
+
+Route::get('/products/showForm', 'ProductController@showForm');
+Route::post('/products/addProduct', 'ProductController@store');
+Route::delete('/products/deleteProduct/{id}', 'ProductController@deleteProduct');
+
+Route::get('/products/edit/{id}', 'ProductController@getEdit');
+Route::post('/products/saveEdit', 'ProductController@saveEdit');

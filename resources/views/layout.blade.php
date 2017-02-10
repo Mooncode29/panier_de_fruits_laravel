@@ -13,7 +13,14 @@
 	</menu>
 	<div class="ui container">
 		@yield('content')
+		<form action="/products/showForm" method="get">
+		{{csrf_field()}}
+			<button class="ui button" type="submit">
+			Ajouter nouveau produit
+			</button>
+		</form>
 	</div>
+
 	<footer>
 		Copyright Irène
 	</footer>

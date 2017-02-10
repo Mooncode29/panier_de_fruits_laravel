@@ -27,5 +27,37 @@ class ProductController extends Controller
     	$product->save();
     	return back();
     }
-    
+
+    public function showForm(){
+        return view('products.form');
+    }
+    public function store (Request $request){
+        $this->validate($request, [
+            'name'=>'required',
+            'price'=>'required',
+            'description'=>'required',
+            'stock'=>'required',          
+            ]);
+        Product::create($request->all());
+        return redirect()->action('ProductController@getIndex');
+    }
+    Public function deleteProduct($id){
+        Product::destroy($id);
+        return redirect()->action('ProductController@getIndex');
+    }
+    Public function getEdit($id){
+        $product = Product::find($id);
+        return view('products.edit', ['produits'=>$product]);
+
+    }
+    Public function saveEdit(Request $request){
+        $editedProduct=Product::find($request->id);
+        $editedProduct->name = $request->name;
+        $editedProduct->price = $request->price;
+        $editedProduct->description = $request->description;
+        $editedProduct->stock = $request->stock;
+        $editedProduct->save();
+        return redirect('/products/show/'.$editedProduct->id);
+    }
+
 }
