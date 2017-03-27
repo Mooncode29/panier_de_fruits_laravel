@@ -23,14 +23,14 @@
 	<form action="/products/deleteProduct/{{$product->id}}" method="post">
 			{{csrf_field()}}
 			{{method_field('DELETE')}}
-			<button class="ui button">Supprimer</button>
+			<button class="ui red button">Supprimer</button>
 	</form>
-	<div>
-		<form action="/products/edit/{{$product->id}}" method="get">
-				
-				<button class="ui button">Modifier</button>
-		</form>
-	</div>
-
+	
+</div>
+<div class="ui segment">
+	<form action="/products/edit/{{$product->id}}" method="get">
+			
+			<button class="ui green button">Modifier</button>
+	</form>
 </div>
 @stop

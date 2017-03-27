@@ -8,8 +8,7 @@
 			<th>Nom du produits</th>
 			<th>Prix en €</th>
 			<th>Description</th>
-			<th>Stock</th>
-			<th>Détails</th>
+			<th>Stock</th>			
 		</tr>
 	</thead>
 	@foreach($produits as $product)
@@ -20,7 +19,7 @@
 			<td><?=$product['price']/100;?></td>
 			<td><?=$product['description'];?></td>
 			<td><?=$product['stock'];?></td>
-			<td><a href="/products/show/{{$product->id}}" class="ui button">Détail</a></td>
+			<td><a href="/products/show/{{$product->id}}" class="ui button">Voir détails</a></td>
 		</tr>
 	</tbody>
 		<!-- <li><a href="/products/show/{{$product->id}}">{{$product->name}}</a></li>

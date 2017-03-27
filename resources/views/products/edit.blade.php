@@ -21,8 +21,11 @@
 		<label for="quantite">Quantité</label>
 		<input type="number" name="stock" value="{{$produits->stock}}">
 	</div>
-	<div class="field">
-		<input type="submit" value="Valider les modifications">
+	<div class="ui segment">
+		<button class="ui green button" type="submit">
+				Enregistrer
+		</button>
+		
 	</div>
 
 </form>

@@ -15,9 +15,11 @@
 		@yield('content')
 		<form action="/products/showForm" method="get">
 		{{csrf_field()}}
-			<button class="ui button" type="submit">
+		<div class="ui segment">
+			<button class="ui button" id="ajout" type="submit">
 			Ajouter nouveau produit
 			</button>
+		</div>
 		</form>
 	</div>
 

@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-<h1>Create Product</h1>
+<h1>Créer votre produit</h1>
 
 @if (count($errors) > 0)
     <div class="alert alert-danger">
@@ -30,8 +30,11 @@
 		<label for="quantite">Quantité</label>
 		<input type="number" name="stock">
 	</div>
-	<div class="field">
-		<input type="submit" value="Valider">
+	<div class="ui segment">
+		<button class="ui green button" type="submit">
+				Enregistrer
+		</button>
+		
 	</div>
 
 </form>
